@@ -15,6 +15,7 @@ public class ExitScript : MonoBehaviour {
 
 	void OnTriggerEnter(Collider col) {
 		if (col.gameObject.name.Equals ("Player")) {
+			Application.LoadLevel("Map");
 			Debug.Log ("Going to overworld");
 		}
 	}
