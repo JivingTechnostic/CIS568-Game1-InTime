@@ -5,13 +5,14 @@ using System.Collections;
 public class DialogueScript : MonoBehaviour {
 	public GameObject unlockAlertPrefab;
 
-	enum DialogueType {DEFAULT, STAGE, AREA, ITEM};
+	enum DialogueType {DEFAULT, STAGE, AREA, ITEM, DAY};
 	DialogueType type;
 	public string name;
 	public string text;	// note that this could be an array, for multiple pages of text.
 	ControllerScript.Area areaUnlock;
 	ControllerScript.Stage stageUnlock;
 	ControllerScript.Item itemUnlock;
+	int dayUnlock;
 
 	// Use this for initialization.  For time-safe operations, should begin with this disabled, set vars, then reenable.
 	void Start () {
@@ -40,6 +41,9 @@ public class DialogueScript : MonoBehaviour {
 				case DialogueType.ITEM:
 					alertScript.setItemUnlock(itemUnlock);
 					break;
+				case DialogueType.DAY:
+					alertScript.setDayUnlock(dayUnlock);
+					break;
 				}
 			} else {
 				//allow the character to move again.
@@ -59,5 +63,9 @@ public class DialogueScript : MonoBehaviour {
 	public void setItemUnlock(ControllerScript.Item item) {
 		itemUnlock = item;
 		type = DialogueType.ITEM;
+	}
+	public void setDayUnlock(int days) {
+		type = DialogueType.DAY;
+		dayUnlock = days;
 	}
 }

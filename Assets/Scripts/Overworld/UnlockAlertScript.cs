@@ -4,7 +4,7 @@ using System.Collections;
 
 public class UnlockAlertScript : MonoBehaviour {
 	// This is currently redundant with DialogueScript, but I think it works for now.
-	enum AlertType {DEFAULT, STAGE, AREA, ITEM};
+	enum AlertType {DEFAULT, STAGE, AREA, ITEM, DAY};
 	AlertType type;
 	public string text;	// note that this could be an array, for multiple pages of text.
 	ControllerScript.Area areaUnlock;
@@ -30,6 +30,9 @@ public class UnlockAlertScript : MonoBehaviour {
 			case AlertType.ITEM:
 				GameObject.Find ("GameController").GetComponent<ControllerScript>().addItem(itemUnlock);
 				break;
+			case AlertType.DAY:
+				GameObject.Find ("GameController").GetComponent<ControllerScript>().unlockNextDay();
+				break;
 			}
 			Destroy (gameObject);
 		}
@@ -42,9 +45,16 @@ public class UnlockAlertScript : MonoBehaviour {
 		case ControllerScript.Area.MUSEUM:
 			text = "The Museum";
 			break;
+		case ControllerScript.Area.PLANT:
+			text = "The Power Plant";
+			break;
+		case ControllerScript.Area.GAMESTORE:
+			text = "The Game Store";
+			break;
 		}
 		text += " has been unlocked on the map!";
 	}
+
 	public void setStageUnlock(ControllerScript.Stage stage) {
 		stageUnlock = stage;
 		type = AlertType.STAGE;
@@ -65,6 +75,7 @@ public class UnlockAlertScript : MonoBehaviour {
 		// Note that limbo does not get an alert since it's a special stage.  In fact, it probably shouldn't be in ControllerScript.Stage.
 		text += " has been unlocked as a stage!";
 	}
+
 	public void setItemUnlock(ControllerScript.Item item) {
 		itemUnlock = item;
 		type = AlertType.ITEM;
@@ -73,6 +84,11 @@ public class UnlockAlertScript : MonoBehaviour {
 			text = "GameBro";
 			break;
 		}
-		text += " hsa been added to your inventory.";
+		text += " has been added to your inventory.";
+	}
+
+	public void setDayUnlock(int days) {
+		type = AlertType.DAY;
+		text = "You can now travel back " + days + " days!";
 	}
 }

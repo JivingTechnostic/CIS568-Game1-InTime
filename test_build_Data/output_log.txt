@@ -12,17 +12,135 @@ Platform assembly: D:\Documents\CIS 568\CIS568-Game1-InTime\test_build_Data\Mana
 Loading D:\Documents\CIS 568\CIS568-Game1-InTime\test_build_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
 Platform assembly: D:\Documents\CIS 568\CIS568-Game1-InTime\test_build_Data\Managed\UnityEngine.UI.dll (this message is harmless)
 Loading D:\Documents\CIS 568\CIS568-Game1-InTime\test_build_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-- Completed reload, in  0.039 seconds
+- Completed reload, in  0.045 seconds
 desktop: 1920x1080 60Hz; virtual: 3840x1080 at -1920,0
 <RI> Initializing input.
 <RI> Input initialized.
 Platform assembly: D:\Documents\CIS 568\CIS568-Game1-InTime\test_build_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: D:\Documents\CIS 568\CIS568-Game1-InTime\test_build_Data\Managed\System.dll (this message is harmless)
-Attempted speech
+UnloadTime: 1.536985 ms
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 265.
+Total: 0.570917 ms (FindLiveObjects: 0.013257 ms CreateObjectMapping: 0.007270 ms MarkObjects: 0.193726 ms  DeleteObjects: 0.002993 ms)
+
+Going to overworld
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Attempting interact with Red-Haired Girl
+UnloadTime: 0.451601 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 46 unused Assets to reduce memory usage. Loaded Objects now: 240.
+Total: 0.575621 ms (FindLiveObjects: 0.008980 ms CreateObjectMapping: 0.007697 ms MarkObjects: 0.230505 ms  DeleteObjects: 0.074839 ms)
+
+UnloadTime: 0.285244 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 272.
+Total: 0.494794 ms (FindLiveObjects: 0.010691 ms CreateObjectMapping: 0.007697 ms MarkObjects: 0.182607 ms  DeleteObjects: 0.002138 ms)
+
+Attempting Interaction
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Attempting Interaction
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Attempting interact with Professor
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Attempting Interaction
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Attempting Interaction
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Attempting interact with Professor
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+PLANT
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Going to overworld
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+UnloadTime: 0.359228 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 240.
+Total: 0.598286 ms (FindLiveObjects: 0.009408 ms CreateObjectMapping: 0.007270 ms MarkObjects: 0.259157 ms  DeleteObjects: 0.066286 ms)
+
+UnloadTime: 0.422949 ms
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 272.
+Total: 0.578614 ms (FindLiveObjects: 0.009408 ms CreateObjectMapping: 0.007697 ms MarkObjects: 0.220241 ms  DeleteObjects: 0.002565 ms)
+
+Attempting Interaction
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Attempting interact with 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+GAMESTORE
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Going to overworld
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+UnloadTime: 0.316891 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 240.
+Total: 0.578614 ms (FindLiveObjects: 0.009836 ms CreateObjectMapping: 0.008125 ms MarkObjects: 0.215964 ms  DeleteObjects: 0.077405 ms)
+
+UnloadTime: 0.397717 ms
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 265.
+Total: 0.498643 ms (FindLiveObjects: 0.010263 ms CreateObjectMapping: 0.007697 ms MarkObjects: 0.185173 ms  DeleteObjects: 0.002138 ms)
+
+Attempting Interaction
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Attempting interact with Cashier
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Going to overworld
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+UnloadTime: 0.289093 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 46 unused Assets to reduce memory usage. Loaded Objects now: 240.
+Total: 0.612399 ms (FindLiveObjects: 0.008553 ms CreateObjectMapping: 0.007697 ms MarkObjects: 0.219386 ms  DeleteObjects: 0.073556 ms)
+
+UnloadTime: 0.390019 ms
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 265.
+Total: 0.548679 ms (FindLiveObjects: 0.008980 ms CreateObjectMapping: 0.007697 ms MarkObjects: 0.228794 ms  DeleteObjects: 0.002565 ms)
+
+Attempting Interaction
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Attempting interact with Archeologist
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
@@ -34,14 +152,25 @@ Going to overworld
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-UnloadTime: 1.552808 ms
-Unloading 4 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+UnloadTime: 0.354096 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
-Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 180.
-Total: 0.555949 ms (FindLiveObjects: 0.013257 ms CreateObjectMapping: 0.018816 ms MarkObjects: 0.177048 ms  DeleteObjects: 0.063720 ms)
+Unloading 46 unused Assets to reduce memory usage. Loaded Objects now: 240.
+Total: 0.569634 ms (FindLiveObjects: 0.009836 ms CreateObjectMapping: 0.007697 ms MarkObjects: 0.236064 ms  DeleteObjects: 0.043192 ms)
 
-Level 'Museum' (-1) couldn't be loaded because it has not been added to the build settings.
-To add a level to the build settings use the menu File->Build Settings...
+UnloadTime: 0.334424 ms
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 265.
+Total: 0.547396 ms (FindLiveObjects: 0.009408 ms CreateObjectMapping: 0.007697 ms MarkObjects: 0.227083 ms  DeleteObjects: 0.002138 ms)
+
+Going to overworld
  
-(Filename:  Line: 276)
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+UnloadTime: 0.311331 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 46 unused Assets to reduce memory usage. Loaded Objects now: 240.
+Total: 0.581608 ms (FindLiveObjects: 0.009836 ms CreateObjectMapping: 0.008125 ms MarkObjects: 0.244190 ms  DeleteObjects: 0.054311 ms)
 

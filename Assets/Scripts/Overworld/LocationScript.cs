@@ -33,6 +33,12 @@ public class LocationScript : MonoBehaviour {
 			case ControllerScript.Area.UNIVERSITY:
 				Application.LoadLevel ("University");
 				break;
+			case ControllerScript.Area.PARK:
+				Application.LoadLevel ("Park");
+				break;
+			case ControllerScript.Area.GAMESTORE:
+				Application.LoadLevel ("Store");
+				break;
 		}
 	}
 }

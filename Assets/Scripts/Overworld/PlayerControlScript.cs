@@ -33,7 +33,7 @@ public class PlayerControlScript : MonoBehaviour {
 
 	void OnTriggerStay(Collider col) {
 		if (tryInteract && !controller.isActiveDialogue()) {
-			Debug.Log ("Attempted speech");
+			Debug.Log ("Attempting Interaction");
 			col.gameObject.GetComponent<Interactible>().Interact();
 			tryInteract = false;
 		}
