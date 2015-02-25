@@ -6,7 +6,7 @@ public class ControllerScript : MonoBehaviour {
 	// Consider removing LIMBO as an enum value.
 	public enum Stage{MUSEUM, SUBWAY, PLANT, COMPANY, LIMBO, NONE};
 	public enum Area{LAB, UNIVERSITY, MUSEUM, SUBWAY, PLANT, PARK, GAMESTORE};
-	public enum Item{GAMEBRO, BONES, URANIUM};
+	public enum Item{GAMEBRO, BONES, URANIUM, OIL};
 
 	private HashSet<Area> availableAreas;
 	private HashSet<Stage> availableStages;
@@ -37,6 +37,7 @@ public class ControllerScript : MonoBehaviour {
 
 		inventory = new HashSet<Item> ();
 		inventory.Add (Item.BONES);
+		inventory.Add (Item.OIL);
 
 		playLog = new Stage[5, 5];
 		for (int i = 0; i < 5; i++) {

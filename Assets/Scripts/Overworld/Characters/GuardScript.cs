@@ -17,11 +17,18 @@ public class GuardScript : CharacterScript {
 	public override void Interact() {
 		ControllerScript controllerScript = GameController.GetComponent<ControllerScript> ();
 		if (controllerScript.hasItem (ControllerScript.Item.GAMEBRO)) {
-			DialogueScript dialogueScript = (Instantiate (DialogueBoxPrefab) as GameObject).GetComponent<DialogueScript>();
-			dialogueScript.name = name;
-			dialogueScript.text = "Oh wow, is this GAMEBRO for me?  Thanks!  I'm so distracted now, anyone could potentially sneak into the plant!";
-			dialogueScript.setStageUnlock(ControllerScript.Stage.PLANT);
-			handled = true;
+			if (controllerScript.isStageUnlocked(ControllerScript.Stage.PLANT)) {
+				DialogueScript dialogueScript = (Instantiate (DialogueBoxPrefab) as GameObject).GetComponent<DialogueScript>();
+				dialogueScript.name = name;
+				dialogueScript.text = "Just 10 more minutes... then I'll stop.";
+				handled = true;
+			} else {
+				DialogueScript dialogueScript = (Instantiate (DialogueBoxPrefab) as GameObject).GetComponent<DialogueScript>();
+				dialogueScript.name = name;
+				dialogueScript.text = "Oh wow, is this GAMEBRO for me?  Thanks!  I'm so distracted now, anyone could potentially sneak into the plant!";
+				dialogueScript.setStageUnlock(ControllerScript.Stage.PLANT);
+				handled = true;
+			}
 		} else {
 			DialogueScript dialogueScript = (Instantiate (DialogueBoxPrefab) as GameObject).GetComponent<DialogueScript>();
 			dialogueScript.name = name;
