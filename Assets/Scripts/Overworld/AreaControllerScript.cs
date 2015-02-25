@@ -22,7 +22,7 @@ public class AreaControllerScript : MonoBehaviour {
 	// This should diable and enable elements as appropriate.
 	// Presumably also involves some sort of animation (fade to black and back).
 	public void UpdateArea() {
-		if (gameController.GetComponent<ControllerScript> ().isStageUnlocked (stageCode)) {
+		if (gameController.GetComponent<ControllerScript>().isStageUnlocked (stageCode)) {
 			stageEntrance.SetActive(true);
 		}
 	}

@@ -1,13 +1,13 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Overworld\Characters\GuardScript.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Overworld\Characters\GateGuardScript.cs">
     <Files>
-      <File FileName="Assets\Scripts\Overworld\ExitHintScript.cs" Line="18" Column="36" />
-      <File FileName="Assets\Scripts\Overworld\PlayerControlScript.cs" Line="21" Column="24" />
-      <File FileName="Assets\Scripts\ControllerScript.cs" Line="40" Column="28" />
-      <File FileName="Assets\Scripts\Overworld\UnlockAlertScript.cs" Line="12" Column="35" />
-      <File FileName="Assets\Scripts\Overworld\AreaControllerScript.cs" Line="24" Column="18" />
-      <File FileName="Assets\Scripts\Overworld\Characters\GuardScript.cs" Line="23" Column="69" />
+      <File FileName="Assets\Scripts\Overworld\Characters\GateGuardScript.cs" Line="8" Column="55" />
+      <File FileName="Assets\Scripts\Overworld\ExitHintScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Overworld\PlayerControlScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ControllerScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Overworld\UnlockAlertScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Overworld\AreaControllerScript.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

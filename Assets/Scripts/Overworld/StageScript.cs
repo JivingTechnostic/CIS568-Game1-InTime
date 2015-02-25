@@ -15,7 +15,8 @@ public class StageScript : Interactible {
 
 	// 
 	public override void Interact() {
-		if (!daysOpen [-GameController.GetComponent<ControllerScript> ().day]) {
+		ControllerScript controllerScript = GameController.GetComponent<ControllerScript> ();
+		if (!daysOpen [-controllerScript.day]) {
 			// it's closed.  present closed dialogue.
 			DialogueScript dialogueScript = (Instantiate (DialogueBoxPrefab) as GameObject).GetComponent<DialogueScript>();
 			dialogueScript.name = "";
@@ -23,10 +24,10 @@ public class StageScript : Interactible {
 		} else {
 			switch (stage) {
 			case ControllerScript.Stage.MUSEUM:
-				Application.LoadLevel ("MuseumStage");
+				Application.LoadLevel ("MuseumStage_" + controllerScript.getStageInstances(ControllerScript.Stage.MUSEUM));
 				break;
 			case ControllerScript.Stage.SUBWAY:
-				Application.LoadLevel ("SubwayStage");
+				Application.LoadLevel ("SubwayStage_" + controllerScript.getStageInstances(ControllerScript.Stage.SUBWAY));
 				break;
 			case ControllerScript.Stage.PLANT:
 				Application.LoadLevel ("PlantStage");

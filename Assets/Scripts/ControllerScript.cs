@@ -36,8 +36,6 @@ public class ControllerScript : MonoBehaviour {
 		availableStages.Add (Stage.MUSEUM);
 
 		inventory = new HashSet<Item> ();
-		inventory.Add (Item.BONES);
-		inventory.Add (Item.OIL);
 
 		playLog = new Stage[5, 5];
 		for (int i = 0; i < 5; i++) {
@@ -138,5 +136,19 @@ public class ControllerScript : MonoBehaviour {
 			return "three days ago";
 		}
 		return "today";
+	}
+
+	public int getStageInstances(Stage stage) {
+		int count = 1;	//default is 1
+		for (int i = loop - 1; i >= 0; i--) {
+			if (playLog[i, -day] == stage) {
+				count++;
+			}
+		}
+		return count;
+	}
+
+	public void setStageToday(Stage stage) {
+		playLog [loop, -day] = stage;
 	}
 }
