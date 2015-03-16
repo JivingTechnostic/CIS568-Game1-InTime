@@ -937,7 +937,7 @@ ModelImporter:
     4300522: pasted__nurbsToPoly222
     4300524: pasted__pSphere1
     4300526: pasted__pSphere2
-    7400000: Take 001
+    7400000: walkcycle
     9500000: //RootNode
     13700000: eyebrow
     13700002: face
@@ -1207,7 +1207,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: Take 001
+      name: walkcycle
       takeName: Take 001
       firstFrame: 1
       lastFrame: 60

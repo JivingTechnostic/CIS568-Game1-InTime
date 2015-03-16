@@ -4,6 +4,7 @@ using System.Collections;
 public class PlayerControlScript : MonoBehaviour {
 	float walkingSpeed;
 	public ControllerScript controller;
+	public Animation walkCycle;
 	bool tryInteract;
 
 	// Use this for initialization
@@ -18,10 +19,8 @@ public class PlayerControlScript : MonoBehaviour {
 		// TODO: disable player input during cutscenes.
 		if (GameObject.Find ("DialogueBoxPrefab(Clone)") || GameObject.Find ("UnlockAlertPrefab(Clone)")) {
 		} else {
-
 			if (Input.GetButtonDown ("Interact")) {
 				tryInteract = true;
-				controller.startCutscene("test_scene");
 			}
 			if (controller.isActiveDialogue()) {
 			} else if (Input.GetAxisRaw("Horizontal") > 0) {

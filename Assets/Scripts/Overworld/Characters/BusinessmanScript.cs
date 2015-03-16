@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEditor;
 using System.Collections;
 
 public class BusinessmanScript : CharacterScript {
@@ -11,17 +10,16 @@ public class BusinessmanScript : CharacterScript {
 	}
 	
 	public override void Interact() {
+		Debug.Log ("Attempting interact with " + characterName);
+		handled = false;
 		ControllerScript controllerScript = GameController.GetComponent<ControllerScript> ();
-		Debug.Log (EditorApplication.currentScene + EditorApplication.currentScene.EndsWith ("Party.unity"));
-		if (EditorApplication.currentScene.EndsWith ("Party.unity")) {
+		if (Application.loadedLevelName.Equals ("Party")) {
 			controllerScript.startCutscene ("explosion_1");
 			handled = true;
 		}
 		if (!handled) {
 			base.Interact();
 		}
-		Debug.Log ("Attempting interact with " + characterName);
-		handled = false;
 		// Initiate dialogue, usually.
 	}
 }

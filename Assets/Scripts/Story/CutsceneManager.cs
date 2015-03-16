@@ -4,12 +4,13 @@ using System.Collections.Generic;
 
 public class CutsceneManager : MonoBehaviour {
 	public Dictionary <string, GameObject> cutscenes = new Dictionary<string, GameObject>();
-	GameObject gameController;
+	protected GameObject gameController;
 
 	// Use this for initialization
-	void Start () {
+	public void Start () {
 		loadCutscenes ();
 		gameController = GameObject.Find ("GameController");
+		gameController.GetComponent<ControllerScript> ().setCutsceneManager (gameObject);
 		playScene(gameController.GetComponent<ControllerScript>().getNextCutscene());
 	}
 
@@ -22,6 +23,7 @@ public class CutsceneManager : MonoBehaviour {
 	}
 
 	public void playScene(string name) {
+		Debug.Log ("Playing scene " + name);
 		if (name != null && cutscenes.ContainsKey(name)) {
 			cutscenes[name].SetActive (true);
 		}

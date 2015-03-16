@@ -37,7 +37,9 @@ public class ControllerScript : MonoBehaviour {
 		availableAreas = new HashSet<Area> ();
 		availableAreas.Add (Area.LAB);
 		availableAreas.Add (Area.PARK);
+		availableAreas.Add (Area.PARTY);
 
+		
 		availableStages = new HashSet<Stage> ();
 		availableStages.Add (Stage.MUSEUM);
 
@@ -54,7 +56,11 @@ public class ControllerScript : MonoBehaviour {
 		day = 0;
 		loop = 0;
 	}
-	
+
+	public void loadLevel(string level) {
+		Application.LoadLevel (level);
+	}
+
 	// Update is called once per frame
 	void Update () {
 		
@@ -166,8 +172,14 @@ public class ControllerScript : MonoBehaviour {
 		cutsceneManager.GetComponent<CutsceneManager>().playScene(scene);
 	}
 
+	public void setCutsceneManager(GameObject manager) {
+		cutsceneManager = manager;
+	}
+
 	public string getNextCutscene() {
-		return cutscene;
+		string nextScene = cutscene;
+		cutscene = null;
+		return nextScene;
 	}
 
 	public DialogueBoxScript createDialogueBox() {
