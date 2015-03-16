@@ -5,14 +5,20 @@ using System.Collections.Generic;
 public class ControllerScript : MonoBehaviour {
 	// Consider removing LIMBO as an enum value.
 	public enum Stage{MUSEUM, SUBWAY, PLANT, COMPANY, LIMBO, NONE};
-	public enum Area{LAB, UNIVERSITY, MUSEUM, SUBWAY, PLANT, PARK, GAMESTORE};
+	public enum Area{LAB, UNIVERSITY, MUSEUM, SUBWAY, PLANT, PARK, GAMESTORE, COMPANY, PARTY};
 	public enum Item{GAMEBRO, BONES, URANIUM, OIL};
+
+	public GameObject cutsceneManager;
+	public GameObject DialogueBoxPrefab;
+	public GameObject HintBoxPrefab;
+	public GameObject ConfirmationBoxPrefab;
 
 	private HashSet<Area> availableAreas;
 	private HashSet<Stage> availableStages;
 	private HashSet<Item> inventory;
 	private int furthestBack;
 	private Stage[,] playLog;
+	private string cutscene;
 
 	public int loop;
 	public int day;
@@ -150,5 +156,29 @@ public class ControllerScript : MonoBehaviour {
 
 	public void setStageToday(Stage stage) {
 		playLog [loop, -day] = stage;
+	}
+
+	public void startCutsceneOnLoad(string scene) {
+		cutscene = scene;
+	}
+
+	public void startCutscene(string scene) {
+		cutsceneManager.GetComponent<CutsceneManager>().playScene(scene);
+	}
+
+	public string getNextCutscene() {
+		return cutscene;
+	}
+
+	public DialogueBoxScript createDialogueBox() {
+		return (Instantiate (DialogueBoxPrefab) as GameObject).GetComponent<DialogueBoxScript> ();
+	}
+
+	public HintBoxScript createHintBox() {
+		return (Instantiate (HintBoxPrefab) as GameObject).GetComponent<HintBoxScript> ();
+	}
+
+	public ConfirmationBoxScript createConfirmationBox() {
+		return (Instantiate (ConfirmationBoxPrefab) as GameObject).GetComponent<ConfirmationBoxScript> ();
 	}
 }

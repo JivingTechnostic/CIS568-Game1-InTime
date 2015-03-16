@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class CashierScript : CharacterScript {
@@ -17,19 +17,19 @@ public class CashierScript : CharacterScript {
 	public override void Interact() {
 		ControllerScript controllerScript = GameController.GetComponent<ControllerScript> ();
 		if (controllerScript.hasItem (ControllerScript.Item.GAMEBRO)) {
-			DialogueScript dialogueScript = (Instantiate (DialogueBoxPrefab) as GameObject).GetComponent<DialogueScript>();
-			dialogueScript.name = name;
+			DialogueBoxScript dialogueScript = (Instantiate (DialogueBoxPrefab) as GameObject).GetComponent<DialogueBoxScript>();
+			dialogueScript.characterName = characterName;
 			dialogueScript.text = "Remember to take regular breaks from gaming!";
 			handled = true;
 		} else if (controllerScript.day < -1) {
-			DialogueScript dialogueScript = (Instantiate (DialogueBoxPrefab) as GameObject).GetComponent<DialogueScript>();
-			dialogueScript.name = name;
+			DialogueBoxScript dialogueScript = (Instantiate (DialogueBoxPrefab) as GameObject).GetComponent<DialogueBoxScript>();
+			dialogueScript.characterName = characterName;
 			dialogueScript.text = "You want a GAMEBRO?  You're in luck!  This is our last one.";
 			dialogueScript.setItemUnlock(ControllerScript.Item.GAMEBRO);
 			handled = true;
 		} else {
-			DialogueScript dialogueScript = (Instantiate (DialogueBoxPrefab) as GameObject).GetComponent<DialogueScript>();
-			dialogueScript.name = name;
+			DialogueBoxScript dialogueScript = (Instantiate (DialogueBoxPrefab) as GameObject).GetComponent<DialogueBoxScript>();
+			dialogueScript.characterName = characterName;
 			dialogueScript.text = "The GAMEBRO has been so popular, it's been sold out since " + controllerScript.getRelativeTermForDay(-2) + ".";
 			handled = true;
 		}
@@ -37,7 +37,7 @@ public class CashierScript : CharacterScript {
 		if (!handled) {
 			base.Interact();
 		}
-		Debug.Log ("Attempting interact with " + name);
+		Debug.Log ("Attempting interact with " + characterName);
 		handled = false;
 		// Initiate dialogue, usually.
 	}

@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class GateGuardScript : CharacterScript {
@@ -18,20 +18,20 @@ public class GateGuardScript : CharacterScript {
 		ControllerScript controllerScript = GameController.GetComponent<ControllerScript> ();
 		if (controllerScript.hasItem (ControllerScript.Item.GAMEBRO)) {
 			if (controllerScript.isStageUnlocked(ControllerScript.Stage.PLANT)) {
-				DialogueScript dialogueScript = (Instantiate (DialogueBoxPrefab) as GameObject).GetComponent<DialogueScript>();
-				dialogueScript.name = name;
+				DialogueBoxScript dialogueScript = (Instantiate (DialogueBoxPrefab) as GameObject).GetComponent<DialogueBoxScript>();
+				dialogueScript.characterName = characterName;
 				dialogueScript.text = "Just 10 more minutes... then I'll stop.";
 				handled = true;
 			} else {
-				DialogueScript dialogueScript = (Instantiate (DialogueBoxPrefab) as GameObject).GetComponent<DialogueScript>();
-				dialogueScript.name = name;
+				DialogueBoxScript dialogueScript = (Instantiate (DialogueBoxPrefab) as GameObject).GetComponent<DialogueBoxScript>();
+				dialogueScript.characterName = characterName;
 				dialogueScript.text = "Oh wow, is this GAMEBRO for me?  Thanks!  I'm so distracted now, anyone could potentially sneak into the plant!";
 				dialogueScript.setStageUnlock(ControllerScript.Stage.PLANT);
 				handled = true;
 			}
 		} else {
-			DialogueScript dialogueScript = (Instantiate (DialogueBoxPrefab) as GameObject).GetComponent<DialogueScript>();
-			dialogueScript.name = name;
+			DialogueBoxScript dialogueScript = (Instantiate (DialogueBoxPrefab) as GameObject).GetComponent<DialogueBoxScript>();
+			dialogueScript.characterName = characterName;
 			dialogueScript.text = "Sigh.  I wish I could go to the game store and buy a GAMEBRO to distract myself with, but I'm stuck on duty...";
 			if (!controllerScript.isAreaUnlocked(ControllerScript.Area.GAMESTORE)) {
 				dialogueScript.setAreaUnlock(ControllerScript.Area.GAMESTORE);
@@ -42,7 +42,7 @@ public class GateGuardScript : CharacterScript {
 		if (!handled) {
 			base.Interact();
 		}
-		Debug.Log ("Attempting interact with " + name);
+		Debug.Log ("Attempting interact with " + characterName);
 		handled = false;
 		// Initiate dialogue, usually.
 	}

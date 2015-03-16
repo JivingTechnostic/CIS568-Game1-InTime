@@ -18,8 +18,8 @@ public class StageScript : Interactible {
 		ControllerScript controllerScript = GameController.GetComponent<ControllerScript> ();
 		if (!daysOpen [-controllerScript.day]) {
 			// it's closed.  present closed dialogue.
-			DialogueScript dialogueScript = (Instantiate (DialogueBoxPrefab) as GameObject).GetComponent<DialogueScript>();
-			dialogueScript.name = "";
+			DialogueBoxScript dialogueScript = (Instantiate (DialogueBoxPrefab) as GameObject).GetComponent<DialogueBoxScript>();
+			dialogueScript.characterName = "";
 			dialogueScript.text = "Looks like they're closed today.";
 		} else {
 			switch (stage) {

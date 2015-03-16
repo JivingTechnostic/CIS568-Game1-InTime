@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class TimeMachineScript : Interactible {
@@ -19,8 +19,9 @@ public class TimeMachineScript : Interactible {
 			if (controllerScript.canNextLoop()) {
 				controllerScript.toNextLoop ();
 			} else {
-				DialogueScript dialogueScript = (Instantiate (DialogueBoxPrefab) as GameObject).GetComponent<DialogueScript>();
-				dialogueScript.name = "Me";
+				DialogueBoxScript dialogueScript = (Instantiate (DialogueBoxPrefab) as GameObject).GetComponent<DialogueBoxScript>();
+
+				dialogueScript.characterName = "Me";
 				dialogueScript.text = "I can't travel any futher back yet... better find more materials";
 			}
 		} else {

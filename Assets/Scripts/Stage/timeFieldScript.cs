@@ -31,14 +31,10 @@ public class timeFieldScript : MonoBehaviour {
 	void OnTriggerEnter(Collider other){
 		if (other.gameObject.tag == "Enemy" || 
 		    other.gameObject.tag == "Door" ||
-		    other.gameObject.tag == "SecurityCamera") {
+		    other.gameObject.tag == "SecurityCamera" ||
+		    other.gameObject.tag == "Platform") {
 			if (isTimeWarping){
-				if (other.gameObject.tag == "Enemy")
-					other.GetComponent<GuardScript>().slowDown(ID, timeFactor);
-				else if(other.gameObject.tag == "Door")
-					other.GetComponent<doorScript>().slowDown(ID, timeFactor);
-				else if(other.gameObject.tag == "SecurityCamera"){
-					other.GetComponent<securityCameraScript>().slowDown(ID, timeFactor);}
+				other.GetComponent<slowableObject>().slowDown(ID, timeFactor);
 			}
 			inField.Add (other.gameObject);
 		}
@@ -49,13 +45,9 @@ public class timeFieldScript : MonoBehaviour {
 	void OnTriggerExit(Collider other){
 		if (other.gameObject.tag == "Enemy" || 
 		    other.gameObject.tag == "Door" || 
-		    other.gameObject.tag == "SecurityCamera") {
-			if (other.gameObject.tag == "Enemy")
-				other.GetComponent<GuardScript>().slowDown(ID, 1);
-			else if(other.gameObject.tag == "Door")
-				other.GetComponent<doorScript>().slowDown(ID, 1);
-			else if(other.gameObject.tag == "SecurityCamera")
-				other.GetComponent<securityCameraScript>().slowDown(ID, 1);
+		    other.gameObject.tag == "SecurityCamera" ||
+		    other.gameObject.tag == "Platform") {
+			other.GetComponent<slowableObject>().slowDown(ID, 1);
 			inField.Remove (other.gameObject);
 		}
 	}
@@ -78,13 +70,7 @@ public class timeFieldScript : MonoBehaviour {
 		// flip gravity one by one
 		for (int i = 0; i < inField.Count; i++) {
 			if (inField[i]){
-				if (inField[i].gameObject.tag == "Enemy")
-					inField[i].GetComponent<GuardScript>().slowDown(ID, factor);
-				else if(inField[i].gameObject.tag == "Door")
-					inField[i].GetComponent<doorScript>().slowDown(ID, factor);
-				else if (inField[i].gameObject.tag == "SecurityCamera")
-					inField[i].GetComponent<securityCameraScript>().slowDown(ID, factor);
-
+				inField[i].GetComponent<slowableObject>().slowDown(ID, factor);
 			}
 		}
 	}

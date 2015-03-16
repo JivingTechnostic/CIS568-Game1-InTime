@@ -17,8 +17,8 @@ public class ArcheologistScript : CharacterScript {
 	public override void Interact() {
 		ControllerScript controllerScript = GameController.GetComponent<ControllerScript> ();
 		if (!controllerScript.isAreaUnlocked(ControllerScript.Area.MUSEUM)) {
-			DialogueScript dialogueScript = (Instantiate (DialogueBoxPrefab) as GameObject).GetComponent<DialogueScript>();
-			dialogueScript.name = name;
+			DialogueBoxScript dialogueScript = (Instantiate (DialogueBoxPrefab) as GameObject).GetComponent<DialogueBoxScript>();
+			dialogueScript.characterName = characterName;
 			dialogueScript.text = "Did you know that the museum is holding an exhibit on ancient creatures?  I hear they have real dinosaur bones!";
 			dialogueScript.setAreaUnlock(ControllerScript.Area.MUSEUM);
 			handled = true;
@@ -27,7 +27,7 @@ public class ArcheologistScript : CharacterScript {
 		if (!handled) {
 			base.Interact();
 		}
-		Debug.Log ("Attempting interact with " + name);
+		Debug.Log ("Attempting interact with " + characterName);
 		handled = false;
 		// Initiate dialogue, usually.
 	}

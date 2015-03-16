@@ -3,7 +3,7 @@ using System.Collections;
 using System.IO;
 
 public class CharacterScript : Interactible {
-	public string name;
+	public string characterName;
 	public int id;
 	public string defaultDialogue;
 	protected bool handled;
@@ -20,10 +20,10 @@ public class CharacterScript : Interactible {
 
 	// Typically initates dialogue with NPC.
 	public override void Interact() {
-		Debug.Log ("Attempting interact with " + name);
+		Debug.Log ("Attempting interact with " + characterName);
 		// Initiate dialogue, usually.
-		DialogueScript dialogueScript = (Instantiate (DialogueBoxPrefab) as GameObject).GetComponent<DialogueScript>();
-		dialogueScript.name = name;
+		DialogueBoxScript dialogueScript = (Instantiate (DialogueBoxPrefab) as GameObject).GetComponent<DialogueBoxScript>();
+		dialogueScript.characterName = characterName;
 		dialogueScript.text = defaultDialogue;
 
 		//--------Examples of setting unlocks---------

@@ -15,13 +15,13 @@ public class sensorScript : MonoBehaviour {
 	}
 
 	void OnTriggerStay(Collider other){
-		if (other.gameObject.tag == "Player") {
+		if (other.gameObject.tag == "Player" || other.gameObject.tag == "Box") {
 			door.GetComponent<doorScript>().setActive(true);
 		}
 	}
 	
 	void OnTriggerExit(Collider other){
-		if (other.gameObject.tag == "Player") {
+		if (other.gameObject.tag == "Player" || other.gameObject.tag == "Box") {
 			door.GetComponent<doorScript>().setActive(false);
 		}
 	}

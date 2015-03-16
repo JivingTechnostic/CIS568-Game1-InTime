@@ -2,12 +2,12 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class DialogueScript : MonoBehaviour {
+public class DialogueBoxScript : MonoBehaviour {
 	public GameObject unlockAlertPrefab;
 
-	enum DialogueType {DEFAULT, STAGE, AREA, ITEM, DAY};
+	public enum DialogueType {DEFAULT, STAGE, AREA, ITEM, DAY};
 	DialogueType type;
-	public string name;
+	public string characterName;
 	public string text;	// note that this could be an array, for multiple pages of text.
 	ControllerScript.Area areaUnlock;
 	ControllerScript.Stage stageUnlock;
@@ -16,10 +16,11 @@ public class DialogueScript : MonoBehaviour {
 
 	// Use this for initialization.  For time-safe operations, should begin with this disabled, set vars, then reenable.
 	void Start () {
-		gameObject.transform.Find ("Name").GetComponent<Text>().text = name;
+		gameObject.transform.Find ("Name").GetComponent<Text>().text = characterName;
 		gameObject.transform.Find ("Text").GetComponent<Text>().text = text;
 		gameObject.transform.Find ("Background").GetComponent<Image> ();
 		gameObject.transform.Find ("Image").GetComponent<Image> ();
+		Debug.Log (characterName + " : " + text);
 	}
 	
 	// Update is called once per frame
@@ -27,7 +28,6 @@ public class DialogueScript : MonoBehaviour {
 		// this needs to be fixed somehow.  Currently, using the same key will both create and destroy the object in the same frame.
 		if (Input.anyKeyDown) {
 			if (type != DialogueType.DEFAULT) {
-
 				UnlockAlertScript alertScript = (Instantiate (unlockAlertPrefab) as GameObject).GetComponent<UnlockAlertScript>();
 
 				switch(type) {

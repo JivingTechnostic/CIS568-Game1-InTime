@@ -10,15 +10,18 @@ public class PlayerControlScript : MonoBehaviour {
 	void Start () {
 		walkingSpeed = 0.05f;
 		tryInteract = false;
+		controller = GameObject.Find ("GameController").GetComponent<ControllerScript>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		// TODO: disable player input during cutscenes.
 		if (GameObject.Find ("DialogueBoxPrefab(Clone)") || GameObject.Find ("UnlockAlertPrefab(Clone)")) {
 		} else {
 
 			if (Input.GetButtonDown ("Interact")) {
 				tryInteract = true;
+				controller.startCutscene("test_scene");
 			}
 			if (controller.isActiveDialogue()) {
 			} else if (Input.GetAxisRaw("Horizontal") > 0) {

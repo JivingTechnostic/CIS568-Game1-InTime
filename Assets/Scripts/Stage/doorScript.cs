@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class doorScript : MonoBehaviour {
+public class doorScript : slowableObject {
 	private bool isActive;
 	// controls the movement of the door
 	public float movementTime; 
@@ -9,10 +9,6 @@ public class doorScript : MonoBehaviour {
 
 	private Vector3 originalPosition;
 	private float movementSpeed;
-
-	private float timeSpeed = 1f;
-	// each time a player is slowing this object, multiplier increases by 1
-	private Hashtable table;
 
 	// Use this for initialization
 	void Start () {
@@ -41,17 +37,4 @@ public class doorScript : MonoBehaviour {
 		isActive = boolean;
 	}
 
-	public void slowDown(int ID, float factor){
-		table [ID] = factor;
-		timeSpeed = 1;
-		foreach (DictionaryEntry entry in table){
-			int value = System.Convert.ToInt32(entry.Value);
-			if (value > 1){
-				if (timeSpeed == 1)
-					timeSpeed = value;
-				else
-					timeSpeed += value;
-			}
-		}
-	}
 }

@@ -3,7 +3,7 @@ using System.Collections;
 
 public class stageManager : MonoBehaviour {
 	public GameObject[] players;
-	public GameObject mainCamera;
+	//public GameObject mainCamera;
 
 
 	// Use this for initialization
@@ -37,6 +37,6 @@ public class stageManager : MonoBehaviour {
 					players [i].GetComponent<PlayerController>().setSelected(false);
 			//}
 		}
-		mainCamera.GetComponent<cameraController>().seekTarget();
+		//mainCamera.GetComponent<cameraController>().seekTarget();
 	}
 }

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class stairsScript : MonoBehaviour {
+public class stairsScript : interactableObject {
 	public GameObject connectedStairs;
 
 	// Use this for initialization
@@ -12,5 +12,12 @@ public class stairsScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	
+	}
+
+	override public void interact(PlayerController pc){
+		if (pc.isHoldingBox () == false) {
+			Vector3 temp = connectedStairs.transform.position;
+			pc.transform.position = new Vector3(temp.x, temp.y, 0);
+		}
 	}
 }

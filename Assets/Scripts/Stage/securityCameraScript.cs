@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class securityCameraScript : MonoBehaviour {
+public class securityCameraScript : slowableObject {
 	private bool isActive;
 	// controls the movement of the door
 	public float rotationTime;
@@ -14,9 +14,6 @@ public class securityCameraScript : MonoBehaviour {
 	private float currentRotation;
 	private float rotationDirection;
 	private float rotationSpeed;
-	
-	private float timeSpeed = 1f;
-	private Hashtable table;
 
 	// Use this for initialization
 	void Start () {
@@ -24,8 +21,6 @@ public class securityCameraScript : MonoBehaviour {
 		currentRotation = 0f;
 		isActive = true;
 		rotationDistance = rightRotation + leftRotation;
-
-		table = new Hashtable ();
 
 		// if both are 0, then camera is stationary
 		if (leftRotation + rightRotation != 0){
@@ -62,18 +57,5 @@ public class securityCameraScript : MonoBehaviour {
 	public void setActive(bool boolean){
 		isActive = boolean;
 	}
-	
-	public void slowDown(int ID, float factor){
-		table [ID] = factor;
-		timeSpeed = 1;
-		foreach (DictionaryEntry entry in table){
-			int value = System.Convert.ToInt32(entry.Value);
-			if (value > 1){
-				if (timeSpeed == 1)
-					timeSpeed = value;
-				else
-					timeSpeed += value;
-			}
-		}
-	}
+
 }

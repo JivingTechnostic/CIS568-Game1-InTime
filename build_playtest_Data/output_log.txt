@@ -1,0 +1,100 @@
+Initialize engine version: 4.6.3f1 (4753d8b6ef2b)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: Intel(R) HD Graphics 4600 (ID=0x416)
+    Vendor:   Intel
+    VRAM:     896 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: D:\Documents\CIS 568\CIS568-Game1-InTime\build_playtest_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading D:\Documents\CIS 568\CIS568-Game1-InTime\build_playtest_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: D:\Documents\CIS 568\CIS568-Game1-InTime\build_playtest_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading D:\Documents\CIS 568\CIS568-Game1-InTime\build_playtest_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: D:\Documents\CIS 568\CIS568-Game1-InTime\build_playtest_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading D:\Documents\CIS 568\CIS568-Game1-InTime\build_playtest_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+- Completed reload, in  0.038 seconds
+desktop: 1920x1080 60Hz; virtual: 3840x1080 at -1920,0
+<RI> Initializing input.
+<RI> Input initialized.
+Platform assembly: D:\Documents\CIS 568\CIS568-Game1-InTime\build_playtest_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: D:\Documents\CIS 568\CIS568-Game1-InTime\build_playtest_Data\Managed\System.dll (this message is harmless)
+NullReferenceException: Object reference not set to an instance of an object
+  at ControllerScript.startCutscene (System.String scene) [0x00000] in <filename unknown>:0 
+  at PlayerControlScript.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Attempting Interaction
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Attempting interact with Professor
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Going to overworld
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+UnloadTime: 1.418103 ms
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 265.
+Total: 0.580755 ms (FindLiveObjects: 0.018389 ms CreateObjectMapping: 0.007697 ms MarkObjects: 0.201425 ms  DeleteObjects: 0.079116 ms)
+
+UnloadTime: 0.545687 ms
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 329.
+Total: 0.525159 ms (FindLiveObjects: 0.010263 ms CreateObjectMapping: 0.007697 ms MarkObjects: 0.206557 ms  DeleteObjects: 0.002565 ms)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at ControllerScript.startCutscene (System.String scene) [0x00000] in <filename unknown>:0 
+  at PlayerControlScript.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Attempting Interaction
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Attempting interact with Archeologist
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+MUSEUM
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Going to overworld
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+UnloadTime: 0.433641 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 46 unused Assets to reduce memory usage. Loaded Objects now: 265.
+Total: 0.591018 ms (FindLiveObjects: 0.012401 ms CreateObjectMapping: 0.008125 ms MarkObjects: 0.242052 ms  DeleteObjects: 0.073556 ms)
+
+UnloadTime: 0.292088 ms
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 329.
+Total: 0.539272 ms (FindLiveObjects: 0.009836 ms CreateObjectMapping: 0.008125 ms MarkObjects: 0.221525 ms  DeleteObjects: 0.002138 ms)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at ControllerScript.startCutscene (System.String scene) [0x00000] in <filename unknown>:0 
+  at PlayerControlScript.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Attempting Interaction
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+UnloadTime: 0.366500 ms
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 446.
+Total: 0.515751 ms (FindLiveObjects: 0.014112 ms CreateObjectMapping: 0.008980 ms MarkObjects: 0.164647 ms  DeleteObjects: 0.047897 ms)
+

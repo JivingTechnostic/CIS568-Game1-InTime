@@ -1,13 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class keyItemScript : MonoBehaviour {
+public class keyItemScript : interactableObject {
 	public ControllerScript.Item item;
 	GameObject GameController;
 
 	// Use this for initialization
 	void Start () {
 		GameController = GameObject.Find ("GameController");
+	}
+
+	override public void interact(PlayerController pc){
+		if (pc.isHoldingBox() == false){
+			Pickup ();
+			Destroy(this.gameObject);
+		}
 	}
 
 	public void Pickup() {

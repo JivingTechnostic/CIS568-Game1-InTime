@@ -4,19 +4,27 @@ using System.Collections;
 public class cameraController : MonoBehaviour {
 
 	public GameObject player;
-	Vector3 position; 
+	public float moveTime;
+
+	private GameObject targetPlayer;
+	private Vector3 movespeed;
+	private bool firstTimeSeeking;
+	private Vector3 position; 
 
 	// Use this for initialization
 	void Start () {
+		firstTimeSeeking = true;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (player == null)
-			seekTarget();
-		
-		if (player)
+		if (player && player.GetComponent<PlayerController>().isSelected()){
 			trackTarget ();
+		}
+		else{
+			player = seekTarget();
+		}
+		
 	}
 
 	// tracks the current target
@@ -31,13 +39,13 @@ public class cameraController : MonoBehaviour {
 	}
 
 	// seeks a new target
-	public void seekTarget(){
+	public GameObject seekTarget(){
 		GameObject[] players = GameObject.FindGameObjectsWithTag ("Player");
 		foreach (GameObject p in players){
 			if (p.GetComponent<PlayerController>().isSelected()){
-				player = p;
-				break;
+				return p;
 			}
 		}
+		return null;
 	}
 }

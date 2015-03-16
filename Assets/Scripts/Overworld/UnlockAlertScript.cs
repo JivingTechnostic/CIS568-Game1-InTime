@@ -4,7 +4,7 @@ using System.Collections;
 
 public class UnlockAlertScript : MonoBehaviour {
 	// This is currently redundant with DialogueScript, but I think it works for now.
-	enum AlertType {DEFAULT, STAGE, AREA, ITEM, DAY};
+	public enum AlertType {DEFAULT, STAGE, AREA, ITEM, DAY};
 	AlertType type;
 	public string text;	// note that this could be an array, for multiple pages of text.
 	ControllerScript.Area areaUnlock;
@@ -42,14 +42,23 @@ public class UnlockAlertScript : MonoBehaviour {
 		areaUnlock = area;
 		type = AlertType.AREA;
 		switch (area) {
+		case ControllerScript.Area.PARTY:
+			text = "The Party";
+			break;
+		case ControllerScript.Area.COMPANY:
+			text = "Chronos Inc.";
+			break;
+		case ControllerScript.Area.UNIVERSITY:
+			text = "The University";
+			break;
 		case ControllerScript.Area.MUSEUM:
 			text = "The Museum";
 			break;
 		case ControllerScript.Area.PLANT:
 			text = "The Power Plant";
 			break;
-		case ControllerScript.Area.GAMESTORE:
-			text = "The Game Store";
+		case ControllerScript.Area.SUBWAY:
+			text = "The Subway Station";
 			break;
 		}
 		text += " has been unlocked on the map!";
