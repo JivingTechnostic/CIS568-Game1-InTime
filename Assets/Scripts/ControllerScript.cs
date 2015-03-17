@@ -19,6 +19,7 @@ public class ControllerScript : MonoBehaviour {
 	private int furthestBack;
 	private Stage[,] playLog;
 	private string cutscene;
+	private bool playerControl;
 
 	public int loop;
 	public int day;
@@ -44,6 +45,7 @@ public class ControllerScript : MonoBehaviour {
 		availableStages.Add (Stage.MUSEUM);
 
 		inventory = new HashSet<Item> ();
+		playerControl = true;
 
 		playLog = new Stage[5, 5];
 		for (int i = 0; i < 5; i++) {
@@ -192,5 +194,17 @@ public class ControllerScript : MonoBehaviour {
 
 	public ConfirmationBoxScript createConfirmationBox() {
 		return (Instantiate (ConfirmationBoxPrefab) as GameObject).GetComponent<ConfirmationBoxScript> ();
+	}
+
+	public void disablePlayerControl() {
+		playerControl = false;
+	}
+
+	public void enablePlayerControl() {
+		playerControl = true;
+	}
+
+	public bool isPlayerControl() {
+		return playerControl;
 	}
 }

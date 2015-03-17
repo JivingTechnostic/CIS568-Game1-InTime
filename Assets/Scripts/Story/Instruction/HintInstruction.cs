@@ -6,6 +6,7 @@ public class HintInstruction : Instruction {
 	private bool isActive;
 	public string message;
 	public string image;
+	HintBoxScript hintScript;
 	
 	void Start() {
 		isActive = false;
@@ -13,13 +14,13 @@ public class HintInstruction : Instruction {
 	
 	public override void Enact() {
 		if (!isActive) {
-			HintBoxScript hintScript = (Instantiate (HintBoxPrefab) as GameObject).GetComponent<HintBoxScript>();
+			hintScript = (Instantiate (HintBoxPrefab) as GameObject).GetComponent<HintBoxScript>();
 			hintScript.setText (message);
 			hintScript.setImage (image);
 			isActive = true;
 		}
 		
-		if (isActive && Input.anyKeyDown) {
+		if (isActive && hintScript == null) {
 			completed = true;
 		}
 	}

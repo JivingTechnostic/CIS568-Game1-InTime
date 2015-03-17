@@ -6,6 +6,7 @@ public class DialogueInstruction : Instruction {
 	private bool isActive;
 	public string characterName;
 	public string message;
+	DialogueBoxScript dialogueScript;
 
 	void Start() {
 		isActive = false;
@@ -13,13 +14,13 @@ public class DialogueInstruction : Instruction {
 
 	public override void Enact() {
 		if (!isActive) {
-			DialogueBoxScript dialogueScript = (Instantiate (DialogueBoxPrefab) as GameObject).GetComponent<DialogueBoxScript>();
+			dialogueScript = (Instantiate (DialogueBoxPrefab) as GameObject).GetComponent<DialogueBoxScript>();
 			dialogueScript.characterName = characterName;
 			dialogueScript.text = message;
 			isActive = true;
 		}
 
-		if (isActive && Input.anyKeyDown) {
+		if (isActive && dialogueScript == null) {
 			completed = true;
 		}
 	}

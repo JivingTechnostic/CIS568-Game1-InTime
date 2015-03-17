@@ -16,7 +16,10 @@ public class PlayerControlScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		// TODO: disable player input during cutscenes.
+		if (!controller.isPlayerControl()) {
+			return;
+		}
+
 		if (GameObject.Find ("DialogueBoxPrefab(Clone)") || GameObject.Find ("UnlockAlertPrefab(Clone)")) {
 		} else {
 			if (Input.GetButtonDown ("Interact")) {
