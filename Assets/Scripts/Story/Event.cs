@@ -6,12 +6,14 @@ using System.Linq;
 public class Event : MonoBehaviour {
 	private List<Instruction> instructions;
 	int activeInstruction;
+	ControllerScript controllerScript;
 
 	// Use this for initialization
 	void Start () {
 		instructions = new List<Instruction> ();
 		loadInstructions ();
 		activeInstruction = 0;
+		controllerScript = GameObject.Find ("GameController").GetComponent<ControllerScript> ();
 	}
 
 	private void loadInstructions() {
@@ -27,10 +29,12 @@ public class Event : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (activeInstruction > instructions.Count - 1) {
+			controllerScript.enablePlayerControl ();
 			gameObject.SetActive(false);
 		} else {
 			instructions [activeInstruction].Enact ();
-			
+			controllerScript.disablePlayerControl();
+
 			if (instructions [activeInstruction].isComplete ()) {
 				activeInstruction++;
 			}

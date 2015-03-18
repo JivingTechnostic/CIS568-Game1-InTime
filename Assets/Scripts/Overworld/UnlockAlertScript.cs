@@ -18,7 +18,7 @@ public class UnlockAlertScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.anyKeyDown) {
+		if (Input.GetKeyDown ("space")) {
 			switch(type) {
 			case AlertType.AREA:
 				GameObject.Find ("GameController").GetComponent<ControllerScript>().unlockArea(areaUnlock);

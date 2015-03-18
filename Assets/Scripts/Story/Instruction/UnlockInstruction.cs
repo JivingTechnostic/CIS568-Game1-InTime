@@ -9,6 +9,7 @@ public class UnlockInstruction : Instruction {
 	public ControllerScript.Area areaUnlock;
 	public ControllerScript.Stage stageUnlock;
 	public ControllerScript.Item itemUnlock;
+	UnlockAlertScript alertScript;
 
 	// Use this for initialization
 	void Start () {
@@ -17,7 +18,7 @@ public class UnlockInstruction : Instruction {
 	
 	public override void Enact() {
 		if (!isActive) {
-			UnlockAlertScript alertScript = (Instantiate (unlockAlertPrefab) as GameObject).GetComponent<UnlockAlertScript>();
+			alertScript = (Instantiate (unlockAlertPrefab) as GameObject).GetComponent<UnlockAlertScript>();
 			switch(type) {
 			case UnlockAlertScript.AlertType.AREA:
 				alertScript.setAreaUnlock(areaUnlock);
@@ -32,7 +33,7 @@ public class UnlockInstruction : Instruction {
 			isActive = true;
 		}
 		
-		if (isActive && Input.anyKeyDown) {
+		if (isActive && alertScript == null) {
 			completed = true;
 		}
 	}

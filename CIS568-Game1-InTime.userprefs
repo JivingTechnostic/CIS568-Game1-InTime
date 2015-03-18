@@ -1,22 +1,23 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Overworld\Characters\BusinessmanScript.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Overworld\UnlockAlertScript.cs">
     <Files>
-      <File FileName="Assets\Scripts\Overworld\PlayerControlScript.cs" Line="24" Column="1" />
-      <File FileName="Assets\Scripts\Overworld\StageScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Story\Instruction\UnlockInstruction.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Overworld\DialogueBoxScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Story\Instruction\DialogueInstruction.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Overworld\UnlockAlertScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\ControllerScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Story\HintTriggerScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ControllerScript.cs" Line="197" Column="3" />
+      <File FileName="Assets\Scripts\Overworld\DialogueBoxScript.cs" Line="77" Column="6" />
+      <File FileName="Assets\Scripts\Story\Instruction\UnlockInstruction.cs" Line="12" Column="9" />
+      <File FileName="Assets\Scripts\Story\Instruction\DialogueInstruction.cs" Line="19" Column="34" />
       <File FileName="Assets\Scripts\Overworld\LocationScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Story\CutsceneManager.cs" Line="26" Column="39" />
-      <File FileName="Assets\Scripts\Story\LabCutsceneManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Story\Instruction\QueueCutsceneInstruction.cs" Line="9" Column="20" />
-      <File FileName="Assets\Scripts\Story\Instruction\MoveInstruction.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Overworld\Characters\BusinessmanScript.cs" Line="2" Column="1" />
-      <File FileName="Assets\Scripts\Story\Instruction\LoadInstruction.cs" Line="14" Column="20" />
+      <File FileName="Assets\Scripts\Story\CutsceneManager.cs" Line="20" Column="7" />
+      <File FileName="Assets\Scripts\Story\LabCutsceneManager.cs" Line="5" Column="2" />
+      <File FileName="Assets\Scripts\Story\Instruction\QueueCutsceneInstruction.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Story\Instruction\MoveInstruction.cs" Line="5" Column="27" />
+      <File FileName="Assets\Scripts\Overworld\Characters\BusinessmanScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Story\Instruction\LoadInstruction.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Story\Event.cs" Line="33" Column="32" />
+      <File FileName="Assets\Scripts\Overworld\PlayerControlScript.cs" Line="21" Column="4" />
+      <File FileName="Assets\Scripts\Story\HintBoxScript.cs" Line="17" Column="8" />
+      <File FileName="Assets\Scripts\Story\Instruction\HintInstruction.cs" Line="17" Column="21" />
+      <File FileName="Assets\Scripts\Overworld\UnlockAlertScript.cs" Line="20" Column="18" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
