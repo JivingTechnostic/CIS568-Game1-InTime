@@ -1,0 +1,359 @@
+fileFormatVersion: 2
+guid: 14d817d5679a1254aa87ab78745020a5
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: body
+    100002: curve1
+    100004: curve2
+    100006: eyebrow
+    100008: face
+    100010: group
+    100012: group1
+    100014: hand
+    100016: head
+    100018: huzi1
+    100020: huzi2
+    100022: ikHandle5
+    100024: ikHandle6
+    100026: ikHandle7
+    100028: ikHandle8
+    100030: joint1
+    100032: joint10
+    100034: joint11
+    100036: joint12
+    100038: joint13
+    100040: joint14
+    100042: joint15
+    100044: joint18
+    100046: joint19
+    100048: joint2
+    100050: joint20
+    100052: joint21
+    100054: joint22
+    100056: joint23
+    100058: joint24
+    100060: joint25
+    100062: joint26
+    100064: joint27
+    100066: joint3
+    100068: joint4
+    100070: joint5
+    100072: joint6
+    100074: LeftArmPV
+    100076: lingdai
+    100078: lingdai 1
+    100080: lingdai2
+    100082: lingdai3
+    100084: locator2
+    100086: locator3
+    100088: pasted__head
+    100090: pasted__pSphere1
+    100092: pasted__pSphere2
+    100094: pasted__yisheng_d_lingdai
+    100096: Player
+    100098: polySurface14
+    100100: polySurface15
+    100102: polySurface16
+    100104: polySurface17
+    100106: polySurface5
+    100108: RightArmPV
+    100110: shou1
+    100112: //RootNode
+    100114: white_coat
+    100116: yiling
+    400000: body
+    400002: curve1
+    400004: curve2
+    400006: eyebrow
+    400008: face
+    400010: group
+    400012: group1
+    400014: hand
+    400016: head
+    400018: huzi1
+    400020: huzi2
+    400022: ikHandle5
+    400024: ikHandle6
+    400026: ikHandle7
+    400028: ikHandle8
+    400030: joint1
+    400032: joint10
+    400034: joint11
+    400036: joint12
+    400038: joint13
+    400040: joint14
+    400042: joint15
+    400044: joint18
+    400046: joint19
+    400048: joint2
+    400050: joint20
+    400052: joint21
+    400054: joint22
+    400056: joint23
+    400058: joint24
+    400060: joint25
+    400062: joint26
+    400064: joint27
+    400066: joint3
+    400068: joint4
+    400070: joint5
+    400072: joint6
+    400074: LeftArmPV
+    400076: lingdai
+    400078: lingdai 1
+    400080: lingdai2
+    400082: lingdai3
+    400084: locator2
+    400086: locator3
+    400088: pasted__head
+    400090: pasted__pSphere1
+    400092: pasted__pSphere2
+    400094: pasted__yisheng_d_lingdai
+    400096: Player
+    400098: polySurface14
+    400100: polySurface15
+    400102: polySurface16
+    400104: polySurface17
+    400106: polySurface5
+    400108: RightArmPV
+    400110: shou1
+    400112: //RootNode
+    400114: white_coat
+    400116: yiling
+    4300000: polySurface5
+    4300002: polySurface14
+    4300004: polySurface15
+    4300006: polySurface16
+    4300008: polySurface17
+    4300010: white_coat
+    4300012: hand
+    4300014: yiling
+    4300016: shou1
+    4300018: lingdai2
+    4300020: lingdai3
+    4300022: lingdai
+    4300024: face
+    4300026: eyebrow
+    4300028: huzi1
+    4300030: huzi2
+    4300032: pasted__pSphere1
+    4300034: pasted__pSphere2
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: eyebrow
+    13700002: face
+    13700004: hand
+    13700006: huzi1
+    13700008: huzi2
+    13700010: lingdai 1
+    13700012: lingdai2
+    13700014: lingdai3
+    13700016: pasted__pSphere1
+    13700018: pasted__pSphere2
+    13700020: polySurface14
+    13700022: polySurface15
+    13700024: polySurface16
+    13700026: polySurface17
+    13700028: polySurface5
+    13700030: shou1
+    13700032: white_coat
+    13700034: yiling
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: group
+        weight: 1
+      - path: group/body
+        weight: 1
+      - path: group/body/hand
+        weight: 1
+      - path: group/body/pasted__head
+        weight: 1
+      - path: group/body/pasted__yisheng_d_lingdai
+        weight: 1
+      - path: group/body/shou1
+        weight: 1
+      - path: group/body/white_coat
+        weight: 1
+      - path: group/body/yiling
+        weight: 1
+      - path: group1
+        weight: 1
+      - path: group1/pasted__pSphere1
+        weight: 1
+      - path: group1/pasted__pSphere2
+        weight: 1
+      - path: head
+        weight: 1
+      - path: head/eyebrow
+        weight: 1
+      - path: head/face
+        weight: 1
+      - path: head/huzi1
+        weight: 1
+      - path: head/huzi2
+        weight: 1
+      - path: ikHandle5
+        weight: 1
+      - path: ikHandle6
+        weight: 1
+      - path: ikHandle7
+        weight: 1
+      - path: ikHandle8
+        weight: 1
+      - path: joint1
+        weight: 1
+      - path: joint1/joint2
+        weight: 1
+      - path: joint1/joint2/joint3
+        weight: 1
+      - path: joint1/joint2/joint3/joint4
+        weight: 1
+      - path: joint1/joint2/joint3/joint4/curve1
+        weight: 1
+      - path: joint1/joint2/joint3/joint4/curve2
+        weight: 1
+      - path: joint1/joint2/joint3/joint4/joint5
+        weight: 1
+      - path: joint1/joint2/joint3/joint4/joint5/joint6
+        weight: 1
+      - path: joint1/joint2/joint3/joint4/joint5/joint6/joint18
+        weight: 1
+      - path: joint1/joint2/joint3/joint4/joint5/joint6/joint19
+        weight: 1
+      - path: joint1/joint2/joint3/joint4/joint10
+        weight: 1
+      - path: joint1/joint2/joint3/joint4/joint10/joint11
+        weight: 1
+      - path: joint1/joint2/joint3/joint4/joint10/joint11/joint12
+        weight: 1
+      - path: joint1/joint2/joint3/joint4/joint20
+        weight: 1
+      - path: joint1/joint2/joint3/joint4/joint20/joint21
+        weight: 1
+      - path: joint1/joint2/joint3/joint4/joint20/joint21/joint22
+        weight: 1
+      - path: joint1/joint13
+        weight: 1
+      - path: joint1/joint13/joint14
+        weight: 1
+      - path: joint1/joint13/joint14/joint15
+        weight: 1
+      - path: joint1/joint13/joint14/joint15/joint23
+        weight: 1
+      - path: joint1/joint24
+        weight: 1
+      - path: joint1/joint24/joint25
+        weight: 1
+      - path: joint1/joint24/joint25/joint26
+        weight: 1
+      - path: joint1/joint24/joint25/joint26/joint27
+        weight: 1
+      - path: LeftArmPV
+        weight: 1
+      - path: lingdai
+        weight: 1
+      - path: lingdai/lingdai 1
+        weight: 1
+      - path: lingdai/lingdai2
+        weight: 1
+      - path: lingdai/lingdai3
+        weight: 1
+      - path: locator2
+        weight: 1
+      - path: locator3
+        weight: 1
+      - path: Player
+        weight: 1
+      - path: Player/polySurface5
+        weight: 1
+      - path: Player/polySurface14
+        weight: 1
+      - path: Player/polySurface15
+        weight: 1
+      - path: Player/polySurface16
+        weight: 1
+      - path: Player/polySurface17
+        weight: 1
+      - path: RightArmPV
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
