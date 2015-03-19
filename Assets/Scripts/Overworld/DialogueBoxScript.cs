@@ -40,7 +40,6 @@ public class DialogueBoxScript : MonoBehaviour {
 		msPassed += (int)(Time.deltaTime * 1000);
 		if (!fullTextDisplayed) {
 			int index = msPassed / msPerChar;
-			Debug.Log ("text progressing : " +index);
 			if (index > text.Length) {
 				fullTextDisplayed = true;
 				index = text.Length;

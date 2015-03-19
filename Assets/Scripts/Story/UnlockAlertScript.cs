@@ -51,6 +51,9 @@ public class UnlockAlertScript : MonoBehaviour {
 		case ControllerScript.Area.UNIVERSITY:
 			text = "The University";
 			break;
+		case ControllerScript.Area.PARK:
+			text = "The Park";
+			break;
 		case ControllerScript.Area.MUSEUM:
 			text = "The Museum";
 			break;

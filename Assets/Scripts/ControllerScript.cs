@@ -20,6 +20,7 @@ public class ControllerScript : MonoBehaviour {
 	private Stage[,] playLog;
 	private string cutscene;
 	private bool playerControl;
+	private HashSet<string> cutscenesPlayed;
 
 	public int loop;
 	public int day;
@@ -37,7 +38,6 @@ public class ControllerScript : MonoBehaviour {
 		// Initial set of unlocked locations
 		availableAreas = new HashSet<Area> ();
 		availableAreas.Add (Area.LAB);
-		availableAreas.Add (Area.PARK);
 		availableAreas.Add (Area.PARTY);
 
 		
@@ -170,8 +170,8 @@ public class ControllerScript : MonoBehaviour {
 		cutscene = scene;
 	}
 
-	public void startCutscene(string scene) {
-		cutsceneManager.GetComponent<CutsceneManager>().playScene(scene);
+	public bool startCutscene(string scene) {
+		return cutsceneManager.GetComponent<CutsceneManager>().playScene(scene);
 	}
 
 	public void setCutsceneManager(GameObject manager) {
@@ -179,9 +179,11 @@ public class ControllerScript : MonoBehaviour {
 	}
 
 	public string getNextCutscene() {
-		string nextScene = cutscene;
+		return cutscene;
+	}
+
+	public void cutscenePlayedSuccessfully() {
 		cutscene = null;
-		return nextScene;
 	}
 
 	public DialogueBoxScript createDialogueBox() {
@@ -206,5 +208,13 @@ public class ControllerScript : MonoBehaviour {
 
 	public bool isPlayerControl() {
 		return playerControl;
+	}
+
+	public void cutscenePlayed(string scene) {
+		cutscenesPlayed.Add (scene);
+	}
+
+	public bool hasCutsceneBeenPlayed(string scene) {
+		return cutscenesPlayed.Contains (scene);
 	}
 }
