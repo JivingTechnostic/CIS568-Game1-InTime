@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BusinessmanScript : CharacterScript {
-
+public class ProfessorUniversityScript : CharacterScript {
+	
 	// Use this for initialization
 	void Start () {
 		GameController = GameObject.Find ("GameController");
@@ -13,12 +13,10 @@ public class BusinessmanScript : CharacterScript {
 		Debug.Log ("Attempting interact with " + characterName);
 		handled = false;
 		ControllerScript controllerScript = GameController.GetComponent<ControllerScript> ();
-		if (Application.loadedLevelName.Equals ("Party")) {
-			handled = controllerScript.startCutscene ("explosion_1");
-		}
+		handled = controllerScript.startCutscene ("university_professor_scene");
+		
 		if (!handled) {
 			base.Interact();
 		}
-		// Initiate dialogue, usually.
 	}
 }
