@@ -44,6 +44,8 @@ public class ControllerScript : MonoBehaviour {
 		availableStages = new HashSet<Stage> ();
 		availableStages.Add (Stage.MUSEUM);
 
+		cutscenesPlayed = new HashSet<string> ();
+
 		inventory = new HashSet<Item> ();
 		playerControl = true;
 

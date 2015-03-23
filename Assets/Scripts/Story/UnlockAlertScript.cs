@@ -10,6 +10,7 @@ public class UnlockAlertScript : MonoBehaviour {
 	ControllerScript.Area areaUnlock;
 	ControllerScript.Stage stageUnlock;
 	ControllerScript.Item itemUnlock;
+	public AudioSource jingle;
 
 	// Use this for initialization
 	void Start () {
@@ -18,6 +19,8 @@ public class UnlockAlertScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		jingle.Play();
+
 		if (Input.GetKeyDown ("space")) {
 			switch(type) {
 			case AlertType.AREA:

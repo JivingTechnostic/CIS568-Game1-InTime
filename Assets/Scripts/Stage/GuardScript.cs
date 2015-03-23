@@ -12,6 +12,8 @@ public class GuardScript : slowableObject {
 	private float currentDirection;
 	private float patrolSpeed;
 
+
+
 	// Use this for initialization
 	void Start () {
 		currentDistance = 0f;
@@ -40,5 +42,12 @@ public class GuardScript : slowableObject {
 			
 		}
 	}
+
+	void OnTriggerEnter(Collider other){
+		if (other.gameObject.tag == "Player") {
+			GetComponentInChildren<visionScript>().detected();
+		}
+	}
+
 
 }

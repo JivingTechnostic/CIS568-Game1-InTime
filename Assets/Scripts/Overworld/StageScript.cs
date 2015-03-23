@@ -30,7 +30,7 @@ public class StageScript : Interactible {
 				Application.LoadLevel ("SubwayStage_" + controllerScript.getStageInstances(ControllerScript.Stage.SUBWAY));
 				break;
 			case ControllerScript.Stage.PLANT:
-				Application.LoadLevel ("PlantStage");
+				Application.LoadLevel ("PowerPlantStage_" + controllerScript.getStageInstances(ControllerScript.Stage.PLANT));
 				break;
 			case ControllerScript.Stage.COMPANY:
 				Application.LoadLevel ("CompanyStage");

@@ -3,6 +3,7 @@ using System.Collections;
 
 public class stairsScript : interactableObject {
 	public GameObject connectedStairs;
+	public AudioClip stairsSound;
 
 	// Use this for initialization
 	void Start () {
@@ -18,6 +19,8 @@ public class stairsScript : interactableObject {
 		if (pc.isHoldingBox () == false) {
 			Vector3 temp = connectedStairs.transform.position;
 			pc.transform.position = new Vector3(temp.x, temp.y, 0);
+			showArrow(false);
+			audio.PlayOneShot(stairsSound);
 		}
 	}
 }

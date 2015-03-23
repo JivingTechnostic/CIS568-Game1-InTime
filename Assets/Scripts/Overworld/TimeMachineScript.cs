@@ -1,8 +1,11 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class TimeMachineScript : Interactible {
-	
+	public GameObject confirmationPrefab;
+	ControllerScript controllerScript;
+
 	// Use this for initialization
 	void Start () {
 		GameController = GameObject.Find ("GameController");
@@ -14,10 +17,14 @@ public class TimeMachineScript : Interactible {
 	}
 
 	public override void Interact() {
-		ControllerScript controllerScript = GameController.GetComponent<ControllerScript> ();
+		controllerScript = GameController.GetComponent<ControllerScript> ();
+
 		if (controllerScript.day == 0) {
 			if (controllerScript.canNextLoop()) {
-				controllerScript.toNextLoop ();
+				ConfirmationBoxScript cbox = (Instantiate (confirmationPrefab) as GameObject).GetComponent<ConfirmationBoxScript> ();
+				cbox.setText ("Go to the next loop?");
+				Button confirm = cbox.getConfirm ();
+				confirm.onClick.AddListener(goToNextLoop);
 			} else {
 				DialogueBoxScript dialogueScript = (Instantiate (DialogueBoxPrefab) as GameObject).GetComponent<DialogueBoxScript>();
 
@@ -25,8 +32,18 @@ public class TimeMachineScript : Interactible {
 				dialogueScript.text = "I can't travel any futher back yet... better find more materials";
 			}
 		} else {
-			controllerScript.toNextDay ();
-
+			ConfirmationBoxScript cbox = (Instantiate (confirmationPrefab) as GameObject).GetComponent<ConfirmationBoxScript> ();
+			cbox.setText ("Go to the next day?");
+			Button confirm = cbox.getConfirm ();
+			confirm.onClick.AddListener (goToNextDay);
 		}
+	}
+
+	public void goToNextDay() {
+		controllerScript.toNextDay ();
+	}
+
+	public void goToNextLoop() {
+		controllerScript.toNextLoop ();
 	}
 }

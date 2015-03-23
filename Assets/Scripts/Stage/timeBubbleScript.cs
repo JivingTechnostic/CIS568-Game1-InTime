@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class timeBubbleScript : interactableObject {
+	public AudioClip bubbleSound;
 
 	// Use this for initialization
 	void Start () {
@@ -12,7 +13,7 @@ public class timeBubbleScript : interactableObject {
 	void Update () {
 	
 	}
-
+	
 	override public void interact(PlayerController pc){
 		if (pc.isInvisible()){
 			pc.setInvisible(false);
@@ -25,8 +26,8 @@ public class timeBubbleScript : interactableObject {
 			pc.setInvisible(true);
 			pc.renderer.material = pc.invisibleState;
 			pc.collider.enabled = false;
-			pc.setTimeWarping(false);
 			pc.setInvisiblePosition(new Vector3(pc.transform.position.x, pc.transform.position.y + .5f, pc.transform.position.z + 1.5f));
 		}
+		audio.PlayOneShot(bubbleSound);
 	}
 }

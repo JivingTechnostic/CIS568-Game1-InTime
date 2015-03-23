@@ -3,6 +3,7 @@ using System.Collections;
 
 public class panelScript : interactableObject {
 	public GameObject wiredObject;
+	public AudioClip buttonPressSound;
 
 	// Use this for initialization
 	void Start () {
@@ -20,6 +21,7 @@ public class panelScript : interactableObject {
 				wiredObject.GetComponent<securityCameraScript>().setActive(false);
 			else if (wiredObject.tag == "Platform")
 				wiredObject.GetComponent<movingPlatformScript>().startMove();
+			audio.PlayOneShot(buttonPressSound);
 		}
 	}
 

@@ -10,4 +10,11 @@ public class ConfirmationBoxScript : MonoBehaviour {
 	public void setText(string s) {
 		textField.text = s;
 	}
+
+	public Button getConfirm() {
+		return confirm;
+	}
+	public Button getDeny() {
+		return deny;
+	}
 }

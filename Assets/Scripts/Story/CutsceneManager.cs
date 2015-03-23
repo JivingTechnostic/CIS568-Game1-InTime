@@ -23,13 +23,14 @@ public class CutsceneManager : MonoBehaviour {
 	}
 
 	public bool playScene(string name) {
-		Debug.Log ("Playing scene " + name);
 		if (name != null && cutscenes.ContainsKey(name) && !controller.hasCutsceneBeenPlayed(name)) {
 			controller.cutscenePlayed(name);
 			controller.cutscenePlayedSuccessfully();
 			cutscenes[name].SetActive (true);
+			Debug.Log ("Playing scene " + name);
 			return true;
 		}
+		Debug.Log ("Failed to play scene " + name);
 		return false;
 	}
 }

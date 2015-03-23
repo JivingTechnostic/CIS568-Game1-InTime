@@ -20,7 +20,10 @@ public class ProfessorScript : CharacterScript {
 	public override void Interact() {
 		ControllerScript controllerScript = GameController.GetComponent<ControllerScript> ();
 		if (controllerScript.loop == 0 && controllerScript.day == 0) {
-			if (controllerScript.hasItem (ControllerScript.Item.BONES) && !controllerScript.canNextLoop ()) {
+			if (!controllerScript.hasCutsceneBeenPlayed("professor_bone_scene")) {
+				controllerScript.startCutscene("professor_bone_scene");
+				handled = true;
+			} else if (controllerScript.hasItem (ControllerScript.Item.BONES) && !controllerScript.canNextLoop ()) {
 				DialogueBoxScript dialogueScript = (Instantiate (DialogueBoxPrefab) as GameObject).GetComponent<DialogueBoxScript>();
 				dialogueScript.characterName = characterName;
 				dialogueScript.text = "Oh wow, you found it!  Give me a minute here...";
@@ -29,7 +32,7 @@ public class ProfessorScript : CharacterScript {
 			} else {
 				DialogueBoxScript dialogueScript = (Instantiate (DialogueBoxPrefab) as GameObject).GetComponent<DialogueBoxScript>();
 				dialogueScript.characterName = characterName;
-				dialogueScript.text = "If we had some dinosaur bones, I could fix this up real nice.";
+				dialogueScript.text = "If we had some dinosaur bones, I could fix this up real nice.  Go ask around and see if anyone can help you get some.";
 				handled = true;
 			}
 		} else if (controllerScript.loop == 1 && controllerScript.day == -1) {
