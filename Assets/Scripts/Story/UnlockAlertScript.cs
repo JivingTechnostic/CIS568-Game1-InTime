@@ -66,6 +66,9 @@ public class UnlockAlertScript : MonoBehaviour {
 		case ControllerScript.Area.SUBWAY:
 			text = "The Subway Station";
 			break;
+		case ControllerScript.Area.GAMESTORE:
+			text = "The Game Store";
+			break;
 		}
 		text += " has been unlocked on the map!";
 	}

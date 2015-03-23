@@ -21,6 +21,10 @@ public class keyItemScript : interactableObject {
 		ControllerScript controllerScript = GameController.GetComponent<ControllerScript> ();
 		controllerScript.addItem (item);
 		controllerScript.setStageToday (ControllerScript.Stage.MUSEUM);	// this can be easily resolved with a stageControllerScript and an empty stagecontroller object.
+
+		if (Application.loadedLevelName.StartsWith ("PowerPlantStage")) {
+			Application.LoadLevel("Thanks");
+		}
 		Application.LoadLevel ("Lab");
 	}
 }

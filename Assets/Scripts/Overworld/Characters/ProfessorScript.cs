@@ -35,7 +35,7 @@ public class ProfessorScript : CharacterScript {
 				dialogueScript.text = "If we had some dinosaur bones, I could fix this up real nice.  Go ask around and see if anyone can help you get some.";
 				handled = true;
 			}
-		} else if (controllerScript.loop == 1 && controllerScript.day == -1) {
+		} else if (controllerScript.loop >= 1 && !controllerScript.isAreaUnlocked(ControllerScript.Area.PLANT)) {
 			DialogueBoxScript dialogueScript = (Instantiate (DialogueBoxPrefab) as GameObject).GetComponent<DialogueBoxScript>();
 			dialogueScript.characterName = characterName;
 			dialogueScript.text = "What we need now is some uranium for the laser.  Try looking into the Nuclear Power Plant for the uranium.";

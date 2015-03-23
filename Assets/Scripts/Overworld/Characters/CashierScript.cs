@@ -28,10 +28,16 @@ public class CashierScript : CharacterScript {
 			dialogueScript.setItemUnlock(ControllerScript.Item.GAMEBRO);
 			handled = true;
 		} else {
-			DialogueBoxScript dialogueScript = (Instantiate (DialogueBoxPrefab) as GameObject).GetComponent<DialogueBoxScript>();
-			dialogueScript.characterName = characterName;
-			dialogueScript.text = "The GAMEBRO has been so popular, it's been sold out since " + controllerScript.getRelativeTermForDay(-2) + ".";
+			if (controllerScript.hasCutsceneBeenPlayed("gamebro_info_scene")) {
+				
+				DialogueBoxScript dialogueScript = (Instantiate (DialogueBoxPrefab) as GameObject).GetComponent<DialogueBoxScript>();
+				dialogueScript.characterName = characterName;
+				dialogueScript.text = "The GAMEBRO has been so popular, it's been sold out since " + controllerScript.getRelativeTermForDay(-2) + ".";
+			} else {
+				controllerScript.startCutscene("gamebro_info_scene");
+			}
 			handled = true;
+
 		}
 		
 		if (!handled) {
