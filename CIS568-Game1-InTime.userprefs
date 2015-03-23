@@ -1,24 +1,28 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Overworld\TimeMachineScript.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Stage\keyItemScript.cs">
     <Files>
-      <File FileName="Assets\Scripts\Story\UnlockAlertScript.cs" Line="31" Column="42" />
-      <File FileName="Assets\Scripts\Story\CutsceneManager.cs" Line="21" Column="44" />
-      <File FileName="Assets\Scripts\Overworld\Characters\ReceptionistScript.cs" Line="23" Column="1" />
-      <File FileName="Assets\Scripts\Overworld\Characters\BusinessmanScript.cs" Line="25" Column="1" />
-      <File FileName="Assets\Scripts\Overworld\CharacterScript.cs" Line="40" Column="1" />
-      <File FileName="Assets\Scripts\Overworld\DialogueBoxScript.cs" Line="100" Column="1" />
+      <File FileName="Assets\Scripts\Stage\keyItemScript.cs" Line="24" Column="1" />
+      <File FileName="Assets\Scripts\Overworld\Characters\ArcheologistScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Story\UnlockAlertScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Story\CutsceneManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Overworld\Characters\ReceptionistScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Overworld\Characters\BusinessmanScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Overworld\CharacterScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Overworld\DialogueBoxScript.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\ControllerScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Story\Instruction\UnlockInstruction.cs" Line="41" Column="1" />
-      <File FileName="Assets\Scripts\Overworld\Characters\ProfessorUniversityScript.cs" Line="23" Column="1" />
+      <File FileName="Assets\Scripts\Story\Instruction\UnlockInstruction.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Overworld\Characters\ProfessorUniversityScript.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Overworld\LabNPCManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Overworld\Characters\ProfessorScript.cs" Line="35" Column="145" />
-      <File FileName="Assets\Scripts\Overworld\UniversityNPCManager.cs" Line="9" Column="19" />
-      <File FileName="Assets\Scripts\Overworld\PartyNPCManager.cs" Line="3" Column="1" />
-      <File FileName="Assets\Scripts\Overworld\AreaControllerScript.cs" Line="30" Column="1" />
-      <File FileName="Assets\Scripts\Overworld\StageScript.cs" Line="25" Column="20" />
-      <File FileName="Assets\Scripts\Overworld\TimeMachineScript.cs" Line="31" Column="4" />
-      <File FileName="Assets\Scripts\Story\ConfirmationBoxScript.cs" Line="2" Column="26" />
+      <File FileName="Assets\Scripts\Overworld\Characters\ProfessorScript.cs" Line="40" Column="49" />
+      <File FileName="Assets\Scripts\Overworld\UniversityNPCManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Overworld\PartyNPCManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Overworld\AreaControllerScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Overworld\StageScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Overworld\TimeMachineScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Story\ConfirmationBoxScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Overworld\Characters\CashierScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Story\Instruction\DialogueInstruction.cs" Line="28" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
