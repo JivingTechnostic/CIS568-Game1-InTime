@@ -1,5 +1,7 @@
 # CIS568-Game1-InTime
 # In Time
+###Jiatong He, Yichen Shou, Yang Song
+
 A time-traveling puzzle platformer.
 
 Controls:
