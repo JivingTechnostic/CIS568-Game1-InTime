@@ -16,6 +16,7 @@ space: jump (stage only), close dialogue
 
 shift: time distortion (stage only)
 
+##Overview
 
 In Time is a time-traveling puzzle platformer in which the main character improves a time machine that is initially only able to travel back one day until he can go back far enough to save the world.
 
@@ -42,6 +43,8 @@ Basic RPG-style game base, including features such as:
 * Inventory
 * Quests
 * NPCs
+
+
 Three sample platforming stages, including puzzle elements:
 * Switches
 * Doors
@@ -50,6 +53,7 @@ Three sample platforming stages, including puzzle elements:
 * Blocks
 * Time Bubbles
 * Moving Platforms
+
 Limited art assets, including:
 * A number of background images
 * A time machine (model + texture)
