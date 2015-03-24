@@ -34,6 +34,9 @@ Stages:
 
 Art assets have not been fully integrated.  A few backgrounds and models have been put in, but it is largely proxy geometry.
 
+#Gameplay Video
+[Gameplay](https://youtu.be/_VWVQSe9Mas)
+
 #Implemented Features
 Basic RPG-style game base, including features such as:
 * Dialogue
