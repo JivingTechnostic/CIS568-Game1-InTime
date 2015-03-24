@@ -32,6 +32,10 @@ public class stageManager : MonoBehaviour {
 		else if (Input.GetKeyDown(KeyCode.Alpha3) && players[2] != null){
 			enablePlayer(2);
 		}
+
+		if (Input.GetKeyDown(KeyCode.R)){
+			Application.LoadLevel (Application.loadedLevelName);
+		}
 	}
 
 	// helper that takes an int 0-2 and enables that player
